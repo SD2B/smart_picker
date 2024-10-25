@@ -13,27 +13,27 @@ class Picker {
     return StatePicker(countryName: countryName, onChanged: onChanged);
   }
 
-  static Widget datePicker() {
-    return Text("Country Picker");
-  }
-
-  static Widget timePicker() {
-    return Text("Country Picker");
-  }
-
   static Widget colorPickerX({required ValueChanged<Color> onChanged}) {
     return ColorPickerWidget(onChanged: onChanged);
   }
 
+  static Widget datePicker() {
+    return const Text("Country Picker");
+  }
+
+  static Widget timePicker() {
+    return const Text("Country Picker");
+  }
+
   static Widget languagePicker() {
-    return Text("Country Picker");
+    return const Text("Country Picker");
   }
 
   static Widget imagePicker() {
-    return Text("Country Picker");
+    return const Text("Country Picker");
   }
 
   static Widget filePicker() {
-    return Text("Country Picker");
+    return const Text("Country Picker");
   }
 }
