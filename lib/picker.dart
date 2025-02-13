@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_picker/color_picker/color_picker.dart';
 import 'package:smart_picker/country_picker/country_model/country_model.dart';
+import 'package:smart_picker/language_picker/language_picker.dart';
 
 import 'country_picker/country_picker.dart';
 
@@ -18,22 +19,22 @@ class Picker {
   }
 
   static Widget datePicker() {
-    return const Text("Country Picker");
+    return const Text("Date Picker");
   }
 
   static Widget timePicker() {
-    return const Text("Country Picker");
+    return const Text("Time Picker");
   }
 
-  static Widget languagePicker() {
-    return const Text("Country Picker");
+  static Widget languagePicker({required Function(LanguageModel) onChanged, Widget? child}) {
+    return LanguagePicker(onChanged: onChanged, child: child);
   }
 
   static Widget imagePicker() {
-    return const Text("Country Picker");
+    return const Text("Image Picker");
   }
 
   static Widget filePicker() {
-    return const Text("Country Picker");
+    return const Text("File Picker");
   }
 }

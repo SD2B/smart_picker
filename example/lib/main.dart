@@ -29,6 +29,7 @@ class ExamplesScreen extends HookWidget {
     final selectedCountry = useState<CountryModel?>(null);
     final selectedState = useState<StateModel?>(null);
     final selectedColor = useState(Colors.transparent);
+    final selectedLanguage = useState(LanguageModel());
 
     return Padding(
       padding: const EdgeInsets.all(16.0),
@@ -44,7 +45,17 @@ class ExamplesScreen extends HookWidget {
               Picker.colorPickerX(onChanged: (color) {
                 selectedColor.value = color;
                 debugPrint(selectedColor.value.toString());
-              })
+              }),
+              Picker.languagePicker(
+                  onChanged: (value) {
+                    print(value);
+                  },
+                  child: Container(
+                    height: 50,
+                    width: 300,
+                    decoration: BoxDecoration(border: Border.all(color: Colors.black)),
+                    child: Text(selectedLanguage.value == const LanguageModel() ? "select" : "${selectedLanguage.value.language}"),
+                  )),
             ],
           ),
           Column(

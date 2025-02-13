@@ -37,3 +37,19 @@ Map<String, dynamic> _$$StateModelImplToJson(_$StateModelImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
     };
+
+_$LanguageModelImpl _$$LanguageModelImplFromJson(Map<String, dynamic> json) =>
+    _$LanguageModelImpl(
+      id: (json['id'] as num?)?.toInt(),
+      languageId: (json['languageId'] as num?)?.toInt(),
+      language: json['language'] as String?,
+      countryShortCode: json['countryShortCode'] as String?,
+    );
+
+Map<String, dynamic> _$$LanguageModelImplToJson(_$LanguageModelImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'languageId': instance.languageId,
+      'language': instance.language,
+      'countryShortCode': instance.countryShortCode,
+    };

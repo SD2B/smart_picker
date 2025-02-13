@@ -400,3 +400,198 @@ abstract class _StateModel implements StateModel {
   _$$StateModelImplCopyWith<_$StateModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+LanguageModel _$LanguageModelFromJson(Map<String, dynamic> json) {
+  return _LanguageModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$LanguageModel {
+  int? get id => throw _privateConstructorUsedError;
+  int? get languageId => throw _privateConstructorUsedError;
+  String? get language => throw _privateConstructorUsedError;
+  String? get countryShortCode => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LanguageModelCopyWith<LanguageModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LanguageModelCopyWith<$Res> {
+  factory $LanguageModelCopyWith(
+          LanguageModel value, $Res Function(LanguageModel) then) =
+      _$LanguageModelCopyWithImpl<$Res, LanguageModel>;
+  @useResult
+  $Res call(
+      {int? id, int? languageId, String? language, String? countryShortCode});
+}
+
+/// @nodoc
+class _$LanguageModelCopyWithImpl<$Res, $Val extends LanguageModel>
+    implements $LanguageModelCopyWith<$Res> {
+  _$LanguageModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? languageId = freezed,
+    Object? language = freezed,
+    Object? countryShortCode = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      languageId: freezed == languageId
+          ? _value.languageId
+          : languageId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      countryShortCode: freezed == countryShortCode
+          ? _value.countryShortCode
+          : countryShortCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$LanguageModelImplCopyWith<$Res>
+    implements $LanguageModelCopyWith<$Res> {
+  factory _$$LanguageModelImplCopyWith(
+          _$LanguageModelImpl value, $Res Function(_$LanguageModelImpl) then) =
+      __$$LanguageModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int? id, int? languageId, String? language, String? countryShortCode});
+}
+
+/// @nodoc
+class __$$LanguageModelImplCopyWithImpl<$Res>
+    extends _$LanguageModelCopyWithImpl<$Res, _$LanguageModelImpl>
+    implements _$$LanguageModelImplCopyWith<$Res> {
+  __$$LanguageModelImplCopyWithImpl(
+      _$LanguageModelImpl _value, $Res Function(_$LanguageModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? languageId = freezed,
+    Object? language = freezed,
+    Object? countryShortCode = freezed,
+  }) {
+    return _then(_$LanguageModelImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      languageId: freezed == languageId
+          ? _value.languageId
+          : languageId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      language: freezed == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String?,
+      countryShortCode: freezed == countryShortCode
+          ? _value.countryShortCode
+          : countryShortCode // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$LanguageModelImpl implements _LanguageModel {
+  const _$LanguageModelImpl(
+      {this.id, this.languageId, this.language, this.countryShortCode});
+
+  factory _$LanguageModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LanguageModelImplFromJson(json);
+
+  @override
+  final int? id;
+  @override
+  final int? languageId;
+  @override
+  final String? language;
+  @override
+  final String? countryShortCode;
+
+  @override
+  String toString() {
+    return 'LanguageModel(id: $id, languageId: $languageId, language: $language, countryShortCode: $countryShortCode)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LanguageModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.languageId, languageId) ||
+                other.languageId == languageId) &&
+            (identical(other.language, language) ||
+                other.language == language) &&
+            (identical(other.countryShortCode, countryShortCode) ||
+                other.countryShortCode == countryShortCode));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, languageId, language, countryShortCode);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LanguageModelImplCopyWith<_$LanguageModelImpl> get copyWith =>
+      __$$LanguageModelImplCopyWithImpl<_$LanguageModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$LanguageModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _LanguageModel implements LanguageModel {
+  const factory _LanguageModel(
+      {final int? id,
+      final int? languageId,
+      final String? language,
+      final String? countryShortCode}) = _$LanguageModelImpl;
+
+  factory _LanguageModel.fromJson(Map<String, dynamic> json) =
+      _$LanguageModelImpl.fromJson;
+
+  @override
+  int? get id;
+  @override
+  int? get languageId;
+  @override
+  String? get language;
+  @override
+  String? get countryShortCode;
+  @override
+  @JsonKey(ignore: true)
+  _$$LanguageModelImplCopyWith<_$LanguageModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

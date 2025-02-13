@@ -6,12 +6,12 @@ part 'country_model.g.dart';
 @freezed
 class CountryModel with _$CountryModel {
   const factory CountryModel({
-     String? name,
-     String? code,
-     String? flag,
-     String? shortName,
-     int? phoneNumberLength,
-     List<StateModel>? states,
+    String? name,
+    String? code,
+    String? flag,
+    String? shortName,
+    int? phoneNumberLength,
+    List<StateModel>? states,
   }) = _CountryModel;
 
   factory CountryModel.fromJson(Map<String, dynamic> json) => _$CountryModelFromJson(json);
@@ -20,8 +20,20 @@ class CountryModel with _$CountryModel {
 @freezed
 class StateModel with _$StateModel {
   const factory StateModel({
-     String? name,
+    String? name,
   }) = _StateModel;
 
   factory StateModel.fromJson(Map<String, dynamic> json) => _$StateModelFromJson(json);
+}
+
+@freezed
+class LanguageModel with _$LanguageModel {
+  const factory LanguageModel({
+    int? id,
+    int? languageId,
+    String? language,
+    String? countryShortCode,
+  }) = _LanguageModel;
+
+  factory LanguageModel.fromJson(Map<String, dynamic> json) => _$LanguageModelFromJson(json);
 }
